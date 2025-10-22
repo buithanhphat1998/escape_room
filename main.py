@@ -6,6 +6,12 @@ from code_door import CodeDoor
 import check_input
 import random
 def open_door(door):
+    """
+    Handles the process of attempting to open a given door.
+
+   :param door: Door
+        The door object the player must unlock.
+    """
     print(door.examine_door())
     while not door.is_unlocked():
         print(door.menu_option())
@@ -15,6 +21,12 @@ def open_door(door):
 
 
 def main():
+    """
+    Main function to run the Escape Room game.
+
+    The player must successfully unlock 3 randomly chosen doors 
+    from the available set to escape.
+    """
     print("Welcome to Escape Room\nYou must unlock 3 doors to escape")
     # initialize an array of all doors
     escape_room = [BasicDoor(), LockedDoor(), DeadboltDoor(), ComboDoor(), CodeDoor()]
