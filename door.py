@@ -1,5 +1,23 @@
 from abc import ABC, abstractmethod
 import string
+
+
+"""
+Methods: 
+examine_door(self) – returns a string description of the door.
+menu_options(self) – returns a string of the menu options that user can choose from when
+attempting to unlock the door.
+get_menu_max(self) – returns the number of options in the above menu.
+attempt(self, option) – passes in the user’s selection from the menu. Uses that value to
+update the attributes that are needed to determine whether the user has unlocked the door
+(which is done in the is_unlocked method below). Returns a string describing what the
+user attempted.
+is_unlocked(self) – checks to see if the door was unlocked, returns true if it is, false
+otherwise.
+clue(self) – returns the hint that is returned if the user was unsuccessful at their attempt.
+success(self) – returns the congratulatory message if the user was successful
+"""
+
 class Door(ABC):
     @abstractmethod
     def examine_door(self) -> int: 

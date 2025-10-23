@@ -43,11 +43,10 @@ class LockedDoor(Door):
         return 3
     
     def attempt(self, option):
-        """
-        Records the user's search attempt and returns a message about the action.
+        """Records the user's search attempt and returns a message about the action.
 
         :param option: int
-            The location the user chose to search (1–3).
+            The location the user chose to search (1-3).
         :return: str
             A message describing where the user looked.
         """
